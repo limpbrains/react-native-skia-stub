@@ -20,6 +20,9 @@ export const BlurMask = (): ReactElement => <></>;
 export const DashPathEffect = (): ReactElement => <></>;
 export const Circle = (): ReactElement => <></>;
 export const Paint = (): ReactElement => <></>;
+export const Text = (): ReactElement => <></>;
+export const Mask = (): ReactElement => <></>;
+export const CornerPathEffect = (): ReactElement => <></>;
 export const vec = Mock.vec;
 export const rect = Mock.rect;
 export const Skia = Mock.Skia;
@@ -34,6 +37,7 @@ export const useCanvas = (): object => ({
 		},
 	},
 });
+export const useFont = (): undefined => {};
 
 // export const useValue = Mock.useValue;
 // export const useComputedValue = Mock.useComputedValue;
