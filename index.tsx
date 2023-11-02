@@ -1,6 +1,17 @@
 import React, { ReactElement, useMemo } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Mock } from '@shopify/react-native-skia/lib/module/mock';
+// import { Mock } from '@shopify/react-native-skia/lib/module/mock';
+
+class Stub {
+  constructor() {
+    return new Proxy(() => {}, {
+      get: () => new Stub(),
+      apply: () => new Stub(),
+      set: () => true,
+    });
+  }
+}
+export const Skia = new Stub() as any;
 
 export const Canvas = ({ style }): ReactElement => {
 	const s = useMemo(
@@ -23,12 +34,11 @@ export const Paint = (): ReactElement => <></>;
 export const Text = (): ReactElement => <></>;
 export const Mask = (): ReactElement => <></>;
 export const CornerPathEffect = (): ReactElement => <></>;
-export const vec = Mock.vec;
-export const rect = Mock.rect;
-export const Skia = Mock.Skia;
-export const runTiming = (): undefined => {};
-export const useValue = (): undefined => {};
-export const useComputedValue = (): undefined => {};
+export const vec = (x?: number, y?: number) => ({ x: x ?? 0, y: y ?? x ?? 0 });
+export const rect = (): void => {};
+export const runTiming = (): void => {};
+export const useValue = (): void => {};
+export const useComputedValue = (): void => {};
 export const useCanvas = (): object => ({
 	size: {
 		current: {
@@ -37,7 +47,7 @@ export const useCanvas = (): object => ({
 		},
 	},
 });
-export const useFont = (): undefined => {};
+export const useFont = (): void => {};
 
 // export const useValue = Mock.useValue;
 // export const useComputedValue = Mock.useComputedValue;
