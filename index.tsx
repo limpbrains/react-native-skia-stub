@@ -17,7 +17,7 @@ export const Canvas = ({ style }): ReactElement => {
 	const s = useMemo(
 		() =>
 			StyleSheet.compose(style, {
-				backgroundColor: 'rgba(255, 255, 255, 0.1)',
+				backgroundColor: 'rgba(128, 128, 128, 0.1)',
 			}),
 		[style],
 	);
@@ -30,6 +30,7 @@ export const RadialGradient = (): ReactElement => <></>;
 export const BlurMask = (): ReactElement => <></>;
 export const DashPathEffect = (): ReactElement => <></>;
 export const Circle = (): ReactElement => <></>;
+export const Group = (): ReactElement => <></>;
 export const Paint = (): ReactElement => <></>;
 export const Text = (): ReactElement => <></>;
 export const Mask = (): ReactElement => <></>;
