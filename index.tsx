@@ -1,6 +1,5 @@
 import React, { ReactElement, useMemo } from 'react';
 import { View, StyleSheet } from 'react-native';
-// import { Mock } from '@shopify/react-native-skia/lib/module/mock';
 
 class Stub {
   constructor() {
@@ -49,7 +48,3 @@ export const useCanvas = (): object => ({
 	},
 });
 export const useFont = (): void => {};
-
-// export const useValue = Mock.useValue;
-// export const useComputedValue = Mock.useComputedValue;
-// export const runTiming = Mock.runTiming;

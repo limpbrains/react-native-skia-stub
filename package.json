@@ -1,6 +1,6 @@
 {
   "name": "react-native-skia-stub",
-  "author": "Synonym",
+  "author": "Ivan Vershigora",
   "version": "0.0.1",
   "private": true,
   "main": "index.tsx"
